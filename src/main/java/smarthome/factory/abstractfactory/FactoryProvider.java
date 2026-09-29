@@ -15,6 +15,8 @@ public class FactoryProvider {
             case "tuya":
             case "tuyasmart":
                 return new TuyaSmartFactory();
+            case "zigbee":
+                return new ZigbeeFactory();
             default:
                 throw new IllegalArgumentException("Unsupported ecosystem: " + ecosystemType);
         }
